@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Gotham Rounded";
+    src: url(GothamRounded/GothamRoundedMedium/GothamRoundedMedium.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Park Lane Bold";
+    src: url(fonts/fonnts.com-Park-Lane-.otf) format("opentype");
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: #ccc; /* A4 dışını gri göstermek için */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.a4 {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    padding: 20mm;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction: column;
+}
+
+* {
+    text-align: center;
+    color: #01497E;
+    text-shadow: 0px 0px 1px #7A9FBC;
+}
+
+pre,p {
+    font-family: "Gotham Rounded";
+}
+
+h1,h2 {
+    font-family: "Park Lane Bold";
+}
+
+h2,#not {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+h1 {
+    text-decoration: underline overline;
+}
+
+.flexit {
+    display: flex;
+}
+
+.flexit div {
+    width: calc(170mm/3);
+}
+
+/* Yazdırırken tam A4 olsun */
+@page { size: A4; margin: 0; }
+@media print {
+    body { background: none; padding: 0; }
+    .a4 { box-shadow: none; }
+}
